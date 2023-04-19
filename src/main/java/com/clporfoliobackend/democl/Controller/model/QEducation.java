@@ -4,43 +4,42 @@
  */
 package com.clporfoliobackend.democl.Controller.model;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter
-@Setter
+@Getter @Setter
 @Entity
-@Data
-public class Usuario {
-  
-    
+public class QEducation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="ideusuario")
-    private Integer id;
-    private String nombre;
-    private String email;
-    private String password;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
+    @Column(name = "title")
+    private String title;
+    
+    @Column(name = "subtitle")
+    private String subtitle;
+    
+    @Column(name = "date")
+    private Long date;
+    
     
 
-        
-      public Usuario(){
+    // getters y setters
+    public QEducation(){
     }
-      
-    public  Usuario(Integer idusuario, String nombre, String email, String password){
+    
+    public QEducation(Long id, String title,String subtitle,Long date){
         this.id = id;
-        this.nombre = nombre;
-        this.email = email;
-        this.password = password;
+        this.title = title;
+        this.subtitle = subtitle;
+        this.date = date;
     }
+    
 }

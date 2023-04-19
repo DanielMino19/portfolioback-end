@@ -4,43 +4,43 @@
  */
 package com.clporfoliobackend.democl.Controller.model;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 
+@Entity
 @Getter
 @Setter
-@Entity
-@Data
-public class Usuario {
-  
-    
+public class Swipper {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="ideusuario")
-    private Integer id;
-    private String nombre;
-    private String email;
-    private String password;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+       
+    @Column(name = "img")
+    private String img;
     
-
-        
-      public Usuario(){
+    @Column(name = "title")
+    private String title;
+    
+    @Column(name = "parrafo")
+    private String parrafo;
+    
+    
+    // getters y setters
+    public Swipper(){
     }
-      
-    public  Usuario(Integer idusuario, String nombre, String email, String password){
+    
+    public Swipper(Long id,String img, String title,String parrafo){
         this.id = id;
-        this.nombre = nombre;
-        this.email = email;
-        this.password = password;
+        this.img = img;
+        this.title = title;
+        this.parrafo = parrafo;
+
     }
+    
 }

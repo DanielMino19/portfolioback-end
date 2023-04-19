@@ -9,10 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-/**
- *
- * @author Ella no te ama
- */
+
 public interface IUsuarioService {
      public List<Usuario> verUsuarios ();
     

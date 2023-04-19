@@ -43,7 +43,7 @@ public class WebSecurityConfig {
                     .and()
                     .csrf().disable()
                     .authorizeHttpRequests()
-                    .antMatchers("/api/ver/persona/{id}").permitAll()
+                    .antMatchers("/api/ver/persona/{id}","/api/ver/aboutme/{id}","/api/skills", "/api/skillsbackend").permitAll()
                     .anyRequest()
                     .authenticated()
                     .and()

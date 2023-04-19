@@ -4,7 +4,6 @@
  */
 package com.clporfoliobackend.democl.Controller.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,25 +14,35 @@ import lombok.Setter;
 
 
 
+
 @Getter @Setter
 @Entity
-public class Persona {
+public class Aboutme {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idpersona")
+    @Column(name = "idAboutme")
     
     private Long id;
-    private String titulo;
-    private String parrafo;
-    
+    private String imgSrc;
+    private String description;
+    private Long experience;
+    private Long projects;
+    private Long companies;
 
-    public Persona(){
+    public Aboutme(){
     }
     
-    public Persona(Long id, String titulo,String parrafo){
+    public Aboutme(Long id, String imgSrc,String description,Long experience,Long projects,Long companies){
         this.id = id;
-        this.titulo = titulo;
-        this.parrafo = parrafo;
+        this.imgSrc = imgSrc;
+        this.description = description;
+        this.experience = experience;
+        this.projects = projects;
+        this.companies = companies;
     }
 }
+
+    
+    
+
