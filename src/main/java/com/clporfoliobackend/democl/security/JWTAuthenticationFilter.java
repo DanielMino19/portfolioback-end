@@ -7,6 +7,8 @@ package com.clporfoliobackend.democl.security;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.io.IOException;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.FilterChain;
@@ -57,8 +59,16 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
           UserDetailsImpl userDetails = (UserDetailsImpl) authResult.getPrincipal();
            String token = TokenUtils.createToken(userDetails.getNombre(), userDetails.getUsername());
           
-          response.addHeader("Authorization","Bearer " + token);
+            response.addHeader("Authorization","Bearer " + token);
           response.getWriter().flush();
+          
+         
+            Map<String, String> tokenResponse = new HashMap<>();
+            tokenResponse.put("token", token);
+
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(new ObjectMapper().writeValueAsString(tokenResponse));
            
         super.successfulAuthentication(request, response, chain, authResult);
        }
