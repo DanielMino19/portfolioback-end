@@ -27,7 +27,7 @@ public class QEducation {
     private String subtitle;
     
     @Column(name = "date")
-    private Long date;
+    private String date;
     
     
 
@@ -35,7 +35,7 @@ public class QEducation {
     public QEducation(){
     }
     
-    public QEducation(Long id, String title,String subtitle,Long date){
+    public QEducation(Long id, String title,String subtitle,String date){
         this.id = id;
         this.title = title;
         this.subtitle = subtitle;

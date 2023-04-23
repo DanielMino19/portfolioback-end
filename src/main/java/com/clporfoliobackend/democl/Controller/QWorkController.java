@@ -29,28 +29,28 @@ public class QWorkController {
     
     @GetMapping("/{id}")
     @PreAuthorize("permitAll()")
-    public QWork getSkill(@PathVariable Long id) {
+    public QWork getQWork(@PathVariable Long id) {
         return qworService.getQWork(id);
     }
     
     @PostMapping
-    public QWork createSkill(@RequestBody QWork quali) {
+    public QWork createQWork(@RequestBody QWork quali) {
         return qworService.newQWork(quali);
     }
  
     @PutMapping("/{id}")
-    public QWork updateSkill(@PathVariable Long id, @RequestBody QWork quali) {
+    public QWork updateQWork(@PathVariable Long id, @RequestBody QWork quali) {
         return qworService.updateQWork(id, quali);
     }
     
     @DeleteMapping("/{id}")
-    public void deleteSkill(@PathVariable Long id) {
+    public void deleteQWork(@PathVariable Long id) {
         qworService.deleteQWork(id);
     }
     
     @GetMapping
     @PreAuthorize("permitAll()")
-    public List<QWork> getAllSkills() {
+    public List<QWork> getAllQWork() {
         return qworService.getAllQWork();
     }
 }

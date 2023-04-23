@@ -34,6 +34,7 @@ public class SwipperService implements ISwipperService {
             existingSwipper.setImg(swip.getImg());
             existingSwipper.setTitle(swip.getTitle());
             existingSwipper.setParrafo(swip.getParrafo());
+            existingSwipper.setLinkweb(swip.getLinkweb());
             return skillRepository.save(existingSwipper);
         }
         return null;

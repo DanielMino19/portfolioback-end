@@ -28,28 +28,28 @@ public class QEducationController {
     
     @GetMapping("/{id}")
     @PreAuthorize("permitAll()")
-    public QEducation getSkill(@PathVariable Long id) {
+    public QEducation getQEducation(@PathVariable Long id) {
         return qeduService.getQEducation(id);
     }
     
     @PostMapping
-    public QEducation createSkill(@RequestBody QEducation quali) {
+    public QEducation createQEducation(@RequestBody QEducation quali) {
         return qeduService.newQEducation(quali);
     }
  
     @PutMapping("/{id}")
-    public QEducation updateSkill(@PathVariable Long id, @RequestBody QEducation quali) {
+    public QEducation updateQEducation(@PathVariable Long id, @RequestBody QEducation quali) {
         return qeduService.updateQEducation(id, quali);
     }
     
     @DeleteMapping("/{id}")
-    public void deleteSkill(@PathVariable Long id) {
+    public void deleteQEducation(@PathVariable Long id) {
         qeduService.deleteQEducation(id);
     }
     
     @GetMapping
     @PreAuthorize("permitAll()")
-    public List<QEducation> getAllSkills() {
+    public List<QEducation> getAllQEducation() {
         return qeduService.getAllQEducation();
     }
     

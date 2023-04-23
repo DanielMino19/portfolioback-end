@@ -24,6 +24,9 @@ public class Swipper {
     @Column(name = "img")
     private String img;
     
+    @Column (name ="linkweb")
+    private String linkweb;
+    
     @Column(name = "title")
     private String title;
     
@@ -35,9 +38,10 @@ public class Swipper {
     public Swipper(){
     }
     
-    public Swipper(Long id,String img, String title,String parrafo){
+    public Swipper(Long id,String img, String title,String parrafo, String linkweb){
         this.id = id;
         this.img = img;
+        this.linkweb = linkweb;
         this.title = title;
         this.parrafo = parrafo;
 
