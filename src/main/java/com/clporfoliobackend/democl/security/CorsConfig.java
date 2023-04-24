@@ -20,7 +20,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://portfolio-frontend-dcm.web.app") // Reemplaza con la URL de tu frontend
+                        .allowedOrigins("https://portfolio-frontend-dcm.web.app","https://portfolio-frontend-dcm.web.app/login" ) // Reemplaza con la URL de tu frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true)
