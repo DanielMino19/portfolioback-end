@@ -51,7 +51,8 @@ public class WebSecurityConfig {
                             "/api/qwork",
                             "/api/service",
                             "/api/swipper",
-                            "/verify").permitAll()
+                            "/verify",
+                            "/login").permitAll()
                     .anyRequest()
                     .authenticated()
                     .and()
