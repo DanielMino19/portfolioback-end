@@ -1,5 +1,6 @@
 com\clporfoliobackend\democl\service\IQEducationService.class
 com\clporfoliobackend\democl\service\IUsuarioService.class
+com\clporfoliobackend\democl\Controller\model\Token.class
 com\clporfoliobackend\democl\security\JWTAuthenticationFilter.class
 com\clporfoliobackend\democl\service\SkillsService.class
 com\clporfoliobackend\democl\repository\SwipperRepository.class
@@ -20,6 +21,7 @@ com\clporfoliobackend\democl\repository\ServiceRepository.class
 com\clporfoliobackend\democl\service\ISkillsService.class
 com\clporfoliobackend\democl\service\ITestimonialService.class
 com\clporfoliobackend\democl\security\AuthCredentials.class
+com\clporfoliobackend\democl\Controller\TokenController.class
 com\clporfoliobackend\democl\Controller\Controller.class
 com\clporfoliobackend\democl\service\IQWorkService.class
 com\clporfoliobackend\democl\repository\PersonaRepository.class

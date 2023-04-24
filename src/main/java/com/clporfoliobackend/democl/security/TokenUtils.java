@@ -13,8 +13,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class TokenUtils {
     
     private  final static String ACCESS_TOKEN_SECRET = "3QñÑ2sdasSDFñLFLñ32412HDSD3dsd2w9Udds";
@@ -35,6 +36,18 @@ public class TokenUtils {
             .addClaims(extra)
             .signWith(Keys.hmacShaKeyFor(ACCESS_TOKEN_SECRET.getBytes()))
             .compact();
+    }
+    
+      public boolean validateToken(String token) {
+        try {
+            Jwts.parserBuilder()
+                    .setSigningKey(ACCESS_TOKEN_SECRET.getBytes())
+                    .build()
+                    .parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
     
     public static UsernamePasswordAuthenticationToken getAuthentication(String token){

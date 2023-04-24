@@ -18,6 +18,7 @@ C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobac
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\Controller.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\security\UserDetailsImpl.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\service\IQEducationService.java
+C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\model\Token.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\service\QEducationService.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\security\JWTAuthenticationFilter.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\model\QWork.java
@@ -51,6 +52,7 @@ C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobac
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\SkillsBackendController.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\security\UserDetailServiceImpl.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\ServiceController.java
+C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\TokenController.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\TestimonialController.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\security\TokenUtils.java
 C:\Users\Ella no te ama\Desktop\backEndPortfolio\src\main\java\com\clporfoliobackend\democl\Controller\model\Skillsbackend.java
