@@ -36,7 +36,7 @@ public class WebSecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception{  
         JWTAuthenticationFilter jwtAuthenticationFilter = new JWTAuthenticationFilter();
         jwtAuthenticationFilter.setAuthenticationManager(authManager);
-        jwtAuthenticationFilter.setFilterProcessesUrl("/login");
+        jwtAuthenticationFilter.setFilterProcessesUrl("/api/login");
         
             return http
                     .cors()
@@ -66,8 +66,6 @@ public class WebSecurityConfig {
                     .addFilterAfter(jwtAuthenticationFilter, JWTAuthorizationFilter.class)
                     .build();
         }
-        
-
         @Bean
         AuthenticationManager authManager(HttpSecurity http) throws Exception{
             return http.getSharedObject(AuthenticationManagerBuilder.class)
@@ -77,14 +75,10 @@ public class WebSecurityConfig {
                     .build();
                     
         }
-        
-        
+ 
         @Bean
         PasswordEncoder passwordEncoder(){
-            return new BCryptPasswordEncoder();}
-            
-
-        
+            return new BCryptPasswordEncoder();} 
 }
           
     

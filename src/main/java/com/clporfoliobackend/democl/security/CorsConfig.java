@@ -19,7 +19,7 @@ public class CorsConfig implements WebMvcConfigurer {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://portfolio-frontend-dcm.web.app") // Reemplaza con la URL de tu frontend
+                        .allowedOrigins("https://portfolio-frontend-dcm.web.app") // URL de tu frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(false)
