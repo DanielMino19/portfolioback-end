@@ -12,7 +12,6 @@ com\clporfoliobackend\democl\security\CorsConfig.class
 com\clporfoliobackend\democl\service\ISwipperService.class
 com\clporfoliobackend\democl\service\SwipperService.class
 com\clporfoliobackend\democl\repository\SkillsRepository.class
-com\clporfoliobackend\democl\security\CorsConfig$1.class
 com\clporfoliobackend\democl\Controller\SwipperController.class
 com\clporfoliobackend\democl\repository\QEducationRepository.class
 com\clporfoliobackend\democl\service\ServiceService.class

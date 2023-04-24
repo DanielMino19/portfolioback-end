@@ -11,21 +11,21 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
+
 @EnableWebMvc
 @Configuration
-public class CorsConfig {
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
+public class CorsConfig implements WebMvcConfigurer {
+
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://portfolio-frontend-dcm.web.app","https://portfolio-frontend-dcm.web.app/login" ) // Reemplaza con la URL de tu frontend
+                        .allowedOrigins("https://portfolio-frontend-dcm.web.app") // Reemplaza con la URL de tu frontend
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*")
                         .allowCredentials(true)
                         .maxAge(3600);
             }
-        };
-    }
-}
+       };
+   
+
+
