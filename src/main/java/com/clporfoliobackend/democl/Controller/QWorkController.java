@@ -28,7 +28,6 @@ public class QWorkController {
     private IQWorkService qworService;
     
     @GetMapping("/{id}")
-    @PreAuthorize("permitAll()")
     public QWork getQWork(@PathVariable Long id) {
         return qworService.getQWork(id);
     }
@@ -49,7 +48,6 @@ public class QWorkController {
     }
     
     @GetMapping
-    @PreAuthorize("permitAll()")
     public List<QWork> getAllQWork() {
         return qworService.getAllQWork();
     }

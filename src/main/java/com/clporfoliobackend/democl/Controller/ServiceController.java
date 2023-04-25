@@ -27,7 +27,6 @@ public class ServiceController {
     private IServiceService servService;
     
     @GetMapping("/{id}")
-    @PreAuthorize("permitAll()")
     public Services getService(@PathVariable Long id) {
         return servService.getService(id);
     }
@@ -48,7 +47,6 @@ public class ServiceController {
     }
     
     @GetMapping
-    @PreAuthorize("permitAll()")
     public List<Services> getAllService() {
         return servService.getAllService();
     }
