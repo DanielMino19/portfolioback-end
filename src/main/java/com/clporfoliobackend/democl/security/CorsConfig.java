@@ -23,10 +23,10 @@ public class CorsConfig {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**")
+                registry.addMapping("/**")
 		.allowedOrigins("https://portfolio-frontend-dcm.web.app")
-		.allowedMethods("PUT", "DELETE")
-		.allowedHeaders("header1", "header2", "header3")
+                .allowedMethods("*")
+		.allowedHeaders("*")
 		.exposedHeaders("header1", "header2")
 		.allowCredentials(false).maxAge(3600);
             }
