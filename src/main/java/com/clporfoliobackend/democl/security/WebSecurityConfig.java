@@ -5,6 +5,7 @@
 package com.clporfoliobackend.democl.security;
 
 
+import java.util.Arrays;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +21,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
 
 
 
@@ -39,7 +41,14 @@ public class WebSecurityConfig {
         jwtAuthenticationFilter.setFilterProcessesUrl("/api/login");
         
             return http
-                    .cors()
+                      .cors().configurationSource(request -> {
+                CorsConfiguration cors = new CorsConfiguration();
+                cors.setAllowedOrigins(Arrays.asList("*"));
+                cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+                cors.setAllowedHeaders(Arrays.asList("*"));
+                cors.setExposedHeaders(Arrays.asList("*"));
+                return cors;
+                        })
                     .and()
                     .csrf().disable()
                     .authorizeHttpRequests()
